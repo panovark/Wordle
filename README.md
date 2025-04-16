@@ -21,7 +21,7 @@ Guess the five‑letter “word of the day” in six tries—right in your brows
 
 ## Quick Start
 ```bash
-git clone https://github.com/<your‑username>/wordle.git
+git clone https://github.com/panovark/Wordle.git
 cd wordle
 # then open the page:
 start index.html   # Windows
