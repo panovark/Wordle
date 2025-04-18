@@ -125,24 +125,6 @@
   grid-area: ltr-thirty;
 }
 
-.answer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  width: 50%;
-  padding-top: 4.375rem;
-  font-size: 3.125rem;
-}
-
-.game-name {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-bottom: solid #dfdfdf .0625rem;
-  height: 3.75rem;
-}
-
 .game-body {
   display: grid;
   grid-template-areas:
@@ -157,6 +139,19 @@
   gap: .3125rem;
 }
 
+.game-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid #dfdfdf .0625rem;
+  height: 3.75rem;
+}
+
+span {
+  color: gray;
+  font-size: 1.625rem;
+}
+
 .cell {
   display: flex;
   width: 3.25rem;
@@ -168,11 +163,6 @@
   font-weight: 1000;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-span {
-  color: gray;
-  font-size: 1.625rem;
 }
 
 .green {
@@ -193,6 +183,36 @@ span {
   border: none;
 }
 
+.red {
+  animation: specialFade 1s ease forwards;
+  border-style: solid;
+  border-width: .1875rem;
+}
+
+.loader {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.3125rem solid #ccc;
+  border-top: 0.3125rem solid #333;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 4.6rem;
+  left: 32.5rem;
+  z-index: 999;
+  display: none;
+}
+
+.answer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  padding-top: 4.375rem;
+  font-size: 3.125rem;
+}
+
 @keyframes specialFade {
   0% {
     border-color: #CC3737;
@@ -209,28 +229,6 @@ span {
   100% {
     border-color: #DFDFDF;
   }
-}
-
-.red {
-  animation: specialFade 1s ease forwards;
-  border-style: solid;
-  border-width: .1875rem;
-}
-
-.loader {
-  width: 2.5rem;
-  height: 2.5rem;
-  border: 0.3125rem solid #ccc;
-  border-top: 0.3125rem solid #333;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-
-  position: absolute;
-  top: 4.6rem;
-  left: 32.5rem;
-  z-index: 999;
-
-  display: none;
 }
 
 @keyframes spin {
